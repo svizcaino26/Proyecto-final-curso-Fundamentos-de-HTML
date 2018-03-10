@@ -6,10 +6,81 @@
     <title>Educaion</title>
   </head>
   <body>
+    <header>
+      <svg width="100px" height"200px" viewBox="0 0 100 200">
+        <image xlink:href="images/logo.svg" width="100px" height="200px"></image>
+      </svg>
+      <h1>Resumen Curricular</h1>
+      <h2>Nombre</h2> <h3>Stephen Vizcaíno</h3>
+      <h2>Fecha de Nacimiento</h2> <h3>26/Diciembre/1989</h3>
+      <h2>Lugar de Nacimiento</h2> <h3>Colombia</h3>
+    </header>
     <nav>
        <a href="index.html">Inicio</a>
        <a href="educacion.html">Educación</a>
        <a href="experiencia.html">Experiencia</a>
     </nav>
+    <section id="Educacion">
+      <h2>Educación</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Año</th>
+            <th>Institución</th>
+            <th>Lugar</th>
+            <th>¿Culminó?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2015</td>
+            <td>Universidad Tecnológica de Panamá</td>
+            <td>Panamá</td>
+            <td>si</td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>Instituto América</td>
+            <td>Panamá</td>
+            <td>si</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-Formulario para ingreso de educacion->
+    <section id="study_form">
+      <form>
+        <fieldset>
+          <legend><h3>Agregar Estudios</h3></legend>
+          <label for="year">Año</label>
+          <select name="Año" id="year" required>
+            <script type="text/javascript">
+            var start = 1990;
+            var end = new Date().getFullYear();
+            var options = "";
+            for(var year = start ; year <=end; year++){
+              options += "<option>"+ year +"</option>";
+            }
+            document.getElementById("year").innerHTML = options;
+            </script>
+          </select><br>
+          <label for="institution">Institución</label>
+          <input type="text" name="Institución" id="institution" required><br>
+          <label for="city">Lugar</label><br>
+          <textarea name="Lugar" rows="8" cols="20" id="city"required></textarea><br>
+          <label for="finish">¿Culminó?</label>
+          <input type="radio" name="rad" id="finish" required>Si
+          <input type="radio" name="rad" id="finish" required>No<br>
+          <input type="submit" value="Enviar">
+        </fieldset>
+      </form>
+    </section>
   </body>
+  <footer>
+    <h3>Contacto</h3>
+    <ul id="contactInfo">
+      <li>Email: <a href="mailto:svizcaino26@gmail.com">svizcaino26@gmail.com</a></li>
+      <li>Telefono: (507) 6561-5696</li>
+    </ul>
+  </footer>
 </html>
